@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Posts by <%= user %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Posts by <%= user %></h1>
+    <% for(let i = 0; i < Math.min(posts.length, 5); i++) { %>
+    	
+        <div>
+    		<%- posts[i].title %>
+        	<%- posts[i].body %>
+
+        	Created: <%- posts[i].created %><br>
+        	Last modified: <%- posts[i].modified %>
+        </div>
+    <% } %>
+
+    <% if(posts.length>5) { %>
+    <% let add = "/blog/" + user + "?start=" + posts[5].postid  %>
+    	<a href=<%= add %> id="next">Next</a>
+    <% } %>
+  </body>
+</html>

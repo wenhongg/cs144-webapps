@@ -1,0 +1,8 @@
+<div>
+	<Button type="submit" name="action" (click)="newPost()">New Post</Button>
+</div>
+<h1>BLOG ENTRIES FOR: {{username}}</h1>
+<div class="entry" *ngFor="let post of posts" (click)="this.setDraft(post)">
+	<div class="title">Title: {{post.title}}</div>
+	<div class="details">Created: {{toDate(post.created)}}</div>
+</div>

@@ -1,0 +1,2 @@
+docker run -it -p3000:3000 -p4200:4200 -v ~/Desktop/cs144:/home/cs144/shared --name mean junghoo/cs144-mean
+docker start -i mean

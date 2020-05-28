@@ -1,0 +1,17 @@
+<h2>EDIT POST</h2>
+
+<input type="hidden" name="username" value='test'>
+<div>
+	<label>Title:</label><br>
+	<input type="text" name="title" [(ngModel)]="post.title">
+</div>
+<div>
+	<label>Body:</label><br>
+	<textarea id="body" [(ngModel)]="post.body"></textarea>
+</div>
+
+<div class="info" >Last modified: {{toDate(post?.modified)}}</div>
+
+<button type="submit" name="action" (click)="savePost()">Save</button>
+<button type="submit" name="action" (click)="previewPost()">Preview</button>
+<button type="submit" name="action" (click)="deletePost()">Delete</button>
