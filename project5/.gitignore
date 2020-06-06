@@ -1,0 +1,4 @@
+output/
+metastore_db/
+*.pyc
+derby.log

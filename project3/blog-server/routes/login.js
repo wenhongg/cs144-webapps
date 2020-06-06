@@ -40,7 +40,7 @@ router.post('/', function(req, res, next) {
 		let secret = "C-UFRaksvPKhx1txJYFcut3QGxsafPmwCY6SCly3G6c";
 		let options = { header :{ "alg": "HS256", "typ": "JWT"	}}; //HS256 is default alg
 		let token = jwt.sign(payload, secret, options);
-		console.log(token);
+		//console.log(token);
 		//Send success message
 		res.status(200);
 		res.cookie("jwt",token,{ httpOnly : false });
